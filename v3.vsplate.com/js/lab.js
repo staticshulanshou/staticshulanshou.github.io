@@ -1,7 +1,5 @@
 $(function () {
 
-
-
 //edit project title
 $(".lab-name .btn-edit-name").live("click", function () {
 	var title = $(this).closest("div.name").children("span").text();

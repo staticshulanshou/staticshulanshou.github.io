@@ -4,7 +4,8 @@ $.updateStatus = function (obj, data) {
 	status = data.status.toLowerCase();
 	time_left = data.time_left;
 	if(status == 'running' && time_left < 0){
-		status = 'exited';
+		//status = 'exited';
+		time_left = 0;
 	}
 	time_left = new Date(time_left * 1000).toISOString().substr(11, 8);
 	label = '<span class="label label-default">unknow</span>';
@@ -101,6 +102,6 @@ $.loadStatus = function () {
 	});
 }
 $.loadStatus();
-var i_loadStatus = window.setInterval("$.loadStatus()",10000);
+var i_loadStatus = window.setInterval("$.loadStatus()",5000);
 
 });
