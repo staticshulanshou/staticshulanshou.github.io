@@ -64,7 +64,7 @@ $.loadStatus = function () {
 			try{
 				$.ajax({
 					type:'POST',
-					url: './api.php?mod=project&action=status',
+					url: './api.php?mod=project&action=status&'+Math.random(),
 					timeout : 30000,
 					dataType:'json',
 					data:{
